@@ -258,10 +258,6 @@ nav a[aria-current="true"]{color:var(--fg)}
             </div>
             <p class="status" id="copyStatus" role="status" aria-live="polite" style="margin-top:10px"></p>
           </div>
-          <div class="panel">
-            <h3>Código QR</h3>
-            <div class="qr" id="qr"></div>
-          </div>
         </div>
       </div>
     </div>
@@ -336,7 +332,6 @@ function renderProjects() {
 
 function renderContactExtras() {
   $("#waDirect").setAttribute("href", waLink("Hola NEXO, quiero más información."));
-  $("#qr").innerHTML = CONFIG.qrImage ? `<img src="${esc(CONFIG.qrImage)}" alt="Código QR oficial de NEXO">` : "Espacio para tu código QR";
   if (isHttp(CONFIG.siteUrl)) {
     const l = document.createElement("link");
     l.rel = "canonical"; l.href = CONFIG.siteUrl;
